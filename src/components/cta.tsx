@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Balancer from "react-wrap-balancer";
 import { Section, Container } from "craft";
 import { Button } from "../ui/button";
-import { Form, FormControl, FormField, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormLabel, FormMessage } from "../ui/form";
 import { Input } from "../ui/input";
 
 const formSchema = zod.object({
