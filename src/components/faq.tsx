@@ -5,8 +5,8 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@/components/ui/accordion";
-import {Section, Container} from "@/components/craft";
+} from "../ui/accordion";
+import {Section, Container} from "./craft";
 
 type FaqItem = {
     question: string;
