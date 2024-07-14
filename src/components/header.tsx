@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
-import { Container, Section } from '@/components/craft';
-import { useToast } from '@/components/ui/use-toast';
-import { Button } from '@/components/ui/button';
+import { Container, Section } from './craft';
+import { useToast } from './ui/use-toast';
+import { Button } from './ui/button';
 
 type ToastType = string;
 const content: ToastType[] = [
