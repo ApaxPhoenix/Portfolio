@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 import {ArrowRight} from "lucide-react";
-import {Section, Container} from "@/components/craft";
-import {Button} from "@/components/ui/button";
+import {Section, Container} from "./craft";
+import {Button} from ./ui/button";
 
 const Hero = () => {
     return (
