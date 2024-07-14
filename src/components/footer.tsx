@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
-import { Section, Container } from "@/components/craft";
-import Logo from "@/public/logo.svg";
+import { Section, Container } from "./craft";
+import Logo from "./public/logo.svg";
 
 const Footer = () => {
   return (
