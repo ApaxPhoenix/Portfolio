@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, Container } from "@/components/craft";
+import { Section, Container } from "./craft";
 import Balancer from "react-wrap-balancer";
 import { Code, Box, Braces } from "lucide-react";
 
