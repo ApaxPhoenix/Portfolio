@@ -5,7 +5,7 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "../ui/accordion";
+} from "./ui/accordion";
 import {Section, Container} from "./craft";
 
 type FaqItem = {
