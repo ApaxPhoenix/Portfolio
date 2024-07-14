@@ -2,10 +2,10 @@ import * as zod from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Balancer from "react-wrap-balancer";
-import { Section, Container } from "@/components/craft";
-import { Button } from "@/components/ui/button";
+import { Section, Container } from "craft";
+import { Button } from "../ui/button";
 import { Form, FormControl, FormField, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Input } from "../ui/input";
 
 const formSchema = zod.object({
   email: zod.string().email({
