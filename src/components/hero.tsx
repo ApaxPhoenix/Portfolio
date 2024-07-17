@@ -1,42 +1,53 @@
+import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 import {ArrowRight} from "lucide-react";
-import {Section, Container} from "./craft";
-import {Button} from "./ui/button";
+import {Button} from "@/components/ui/button";
+import {Section, Container} from "@/components/craft";
+import Placeholder from "/public/placeholder.jpg";
 
 const Hero = () => {
     return (
         <Section>
             <Container>
-                <div>
-                    <Button asChild className="mb-6 w-fit" size="sm" variant="outline">
-                        <Link className="not-prose" href="https://www.youtube.com/channel/YOUR_CHANNEL_ID">
-                            Explore my YouTube channel<ArrowRight className="w-4"/>
+                <div className="flex flex-col items-center text-center">
+                    <Button
+                        asChild
+                        className="not-prose mb-6 flex w-fit"
+                        size="sm"
+                        variant="outline"
+                    >
+                        <Link href="https://www.github.com/ApaxPhoenix">
+                            Check out my GitHub! <ArrowRight className="ml-2 w-4"/>
                         </Link>
                     </Button>
-                    <h1>
-                        <Balancer>Welcome to my Portfolio!</Balancer>
-                    </h1>
-                    <h3 className="text-muted-foreground">
+                    <h1 className="!mb-0 text-2xl sm:text-4xl lg:text-4xl">
                         <Balancer>
-                            Originally, this was supposed to be a picture placeholder, but for some design efforts, I didn&apos;t happen. 
-                            I lost track, became enraged, and now it&apos;s all messed up, and I&apos;m being very specific so I could use text space, 
-                            and not make it look weird. Also, watch this video down below, it&apos;s very cool.
+                            Self-Taught Generalist Programmer
                         </Balancer>
-                    </h3>
-                    <div className="not-prose my-8 h-96 w-full overflow-hidden rounded-lg border md:h-[480px] md:rounded-xl">
-                        <iframe
-                            className="w-full h-full border-none"
-                            src="https://www.youtube.com/embed/UjEngEpiJKo"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            title="The Limits of Human Knowledge"
-                        ></iframe>
+                    </h1>
+                    <h2 className="mt-4 text-lg text-muted-foreground sm:text-xl lg:text-lg">
+                        <Balancer>
+                            Developing in Python, C, HTML and CSS, Javascript, Lua, and SQL through passion and
+                            perseverance.
+                            Turning ideas into powerful applications and software solutions.
+                        </Balancer>
+                    </h2>
+                    <div
+                        className="my-8 w-full overflow-hidden rounded-lg border h-64 sm:h-96 md:h-[480px] md:rounded-xl">
+                        <Image
+                            className="not-prose h-full w-full object-cover object-bottom"
+                            src={Placeholder}
+                            width={1920}
+                            height={1080}
+                            alt="hero image"
+                            placeholder="blur"
+                        />
                     </div>
                 </div>
             </Container>
         </Section>
     );
-};
+}
 
 export default Hero;

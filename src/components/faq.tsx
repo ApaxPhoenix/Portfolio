@@ -1,12 +1,12 @@
-import React from "react";
+import Link from "next/link";
 import {ArrowUpRight} from "lucide-react";
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "./ui/accordion";
-import {Section, Container} from "./craft";
+} from "@/components/ui/accordion";
+import {Section, Container} from "@/components/craft";
 
 type FaqItem = {
     question: string;
@@ -34,7 +34,7 @@ const content: FaqItem[] = [
     {
         question: "What are your future goals?",
         answer:
-           " My ultimate goal is to earn a degree from MIT. This ambition drives every project I undertake and every skill I develop. I'm dedicated to turning this dream into reality.",
+           "My ultimate goal is to earn a degree from MIT. This ambition drives every project I undertake and every skill I develop. I'm dedicated to turning this dream into reality.",
     },
     {
         question: "What challenges have you faced in programming?",
@@ -54,8 +54,7 @@ const Faq = () => {
             <Container>
                 <h3 className="!mt-0">Frequently Asked Questions</h3>
                 <h4 className="text-muted-foreground">
-                    Can&apos;t find the answer you&apos;re looking for? Reach out to our
-                    customer support team.
+                    Can&apos;t find the answer you&apos;re looking for? Reach me out in the contact form.
                 </h4>
                 <div className="not-prose mt-4 flex flex-col gap-4 md:mt-8">
                     {content.map((item, index) => (
@@ -70,12 +69,12 @@ const Faq = () => {
                                 <AccordionContent className="text-base md:w-3/4">
                                     {item.answer}
                                     {item.link && (
-                                        <a
+                                        <Link
                                             href={item.link}
                                             className="mt-2 flex w-full items-center opacity-60 transition-all hover:opacity-100"
                                         >
                                             Learn more <ArrowUpRight className="ml-1" size="16"/>
-                                        </a>
+                                        </Link>
                                     )}
                                 </AccordionContent>
                             </AccordionItem>
