@@ -1,11 +1,16 @@
+import {fileURLToPath} from "node:url";
+import path from "node:path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  api: {
-    bodyParser: {
-      sizeLimit: '1mb',
+    reactStrictMode: true,
+    webpack: (config) => {
+        config.resolve.alias['@'] = path.join(__dirname, 'src');
+        return config;
     },
-  },
 };
 
 export default nextConfig;

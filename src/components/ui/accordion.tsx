@@ -1,7 +1,7 @@
 import {forwardRef, ElementRef, ComponentPropsWithoutRef} from "react";
-import {Root, Item, Trigger, Header, Content} from "@radix-ui/react-accordion"
-import {ChevronDown} from "lucide-react"
-import {cn} from "@/lib/utils"
+import {Root, Item, Trigger, Header, Content} from "@radix-ui/react-accordion";
+import {ChevronDown} from "lucide-react";
+import {cn} from "@/lib/utils";
 
 const AccordionItem = forwardRef<
     ElementRef<typeof Item>,
