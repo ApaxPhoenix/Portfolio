@@ -56,7 +56,7 @@ export default async function handler(
             console.log('Attempting to send email with options:', options);
             const info = await transporter.sendMail({
                 from: "mailtrap@demomailtrap.com",
-                to: "andromedeyz@gmail.com",
+                to: "andromedeyz@hotmail.com",
                 ...options
             });
             console.log('Nodemailer response:', info);
@@ -73,4 +73,4 @@ export default async function handler(
         res.setHeader('Allow', ['POST']);
         res.status(405).json({ message: `Method ${request.method} Not Allowed` });
     }
-}
+};
