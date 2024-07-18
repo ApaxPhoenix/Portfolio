@@ -24,6 +24,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  # To see the usage read https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions
+  MAILTRAP_USERNAME: ${{ secrets.MAILTRAP_USERNAME }}
+  MAILTRAP_API_TOKEN: ${{ secrets.MAILTRAP_API_TOKEN }}
+
 jobs:
   # Build job
   build:
@@ -47,7 +52,6 @@ jobs:
           else
             echo "Unable to determine package manager"
             exit 1
-          fi
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
