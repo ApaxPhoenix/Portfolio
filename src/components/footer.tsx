@@ -10,8 +10,8 @@ const Footer = () => {
             <Section>
                 <Container className="grid gap-6">
                     <div className="grid gap-6">
-                        <Link href="https://vercel.com">
-                            <h3 className="sr-only">Hosted on Vercel</h3>
+                        <Link href="https://github.com">
+                            <h3 className="sr-only">Hosted on Github Pages</h3>
                             <Image
                                 src={Logo}
                                 alt="Logo"
