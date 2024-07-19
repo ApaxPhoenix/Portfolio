@@ -10,7 +10,7 @@ interface Package {
 
 const cors = Cors({
     origin: process.env.ALLOWED_ORIGIN,
-    methods: ['POST'],
+    methods: ['POST', 'GET'],
 });
 
 function runMiddleware(
