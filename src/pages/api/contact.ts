@@ -2,6 +2,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import Cors from 'cors';
 
+interface Package {
+    name: string;
+    subject: string;
+    text: string;
+}
+
 const allowedOrigins = ['https://apaxphoenix.github.io', 'http://localhost:3000'];
 
 const cors = Cors({
