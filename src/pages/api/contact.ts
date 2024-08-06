@@ -1,31 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
-import Cors from 'cors';
 
 interface Package {
     name: string;
     subject: string;
     text: string;
-}
-
-const cors = Cors({
-    origin: ['https://github.io', 'http://localhost'],
-    methods: ['POST'],
-});
-
-function runMiddleware(
-    req: NextApiRequest,
-    res: NextApiResponse,
-    fn: Function
-) {
-    return new Promise((resolve, reject) => {
-        fn(req, res, (result: any) => {
-            if (result instanceof Error) {
-                return reject(result);
-            }
-            return resolve(result);
-        });
-    });
 }
 
 const transporter = nodemailer.createTransport({
@@ -42,8 +21,6 @@ export default async function handler(
     request: NextApiRequest,
     res: NextApiResponse<{ message: string }>
 ) {
-    await runMiddleware(request, res, cors);
-
     if (request.method === 'POST') {
         const { name, subject, text } = request.body as Partial<Package>;
         if (!name || !subject || !text) {
@@ -73,4 +50,4 @@ export default async function handler(
         res.setHeader('Allow', ['POST']);
         res.status(405).json({ message: `Method ${request.method} Not Allowed` });
     }
-};
+}
