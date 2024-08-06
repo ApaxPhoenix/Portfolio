@@ -40,7 +40,7 @@ const ToastViewport = forwardRef<
     <Viewport
         ref={ref}
         className={cn(
-            "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:flex-col md:w-2/4 lg:max-w-[500px]",
+            "fixed z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:flex-col md:w-2/4 lg:max-w-[500px]",
             className
         )}
         {...props}
