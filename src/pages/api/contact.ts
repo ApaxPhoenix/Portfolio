@@ -9,8 +9,8 @@ interface Package {
 }
 
 const cors = Cors({
-    origin: process.env.ALLOWED_ORIGIN,
-    methods: ['POST', 'GET'],
+    origin: ['hhtps://apaxphoenix.github.io', 'http://localhost'],
+    methods: ['POST'],
 });
 
 function runMiddleware(
